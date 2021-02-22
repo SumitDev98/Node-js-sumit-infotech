@@ -62,3 +62,5 @@ app.post("/contactus", async(req, res) => {
 app.listen(port, () => {
     console.log(`Server is running at Port: ${port}`);
 })
+
+// "dev": "nodemon src/app.js -e js,hbs"
