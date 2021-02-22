@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
     res.render("index");
 })
 
+app.get("/index", (req, res) => {
+    res.render("index");
+})
+
 app.get("/intro", (req, res) => {
     res.render("index");
 })
@@ -48,7 +52,7 @@ app.post("/contactus", async(req, res) => {
         // res.send(req.body);
         const userData = new User(req.body);
         await userData.save();
-        res.status(201).render("index");
+        res.status(201).render("contactus_success");
     } catch (error) {
         res.status(500).send(error)
     }
